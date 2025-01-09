@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abone Bilgi Yönetim Sistemi</title>
+    <title>Abone Bilgi Sistemi</title>
     <style>
         body {
             font-family: 'Helvetica Neue', sans-serif;
@@ -150,6 +150,7 @@
     </header>
     <nav>
         <ul>
+            <li><a href="#services">Ana sayfa</a></li>
             <li><a href="#services">Hizmetlerimiz</a></li>
             <li><a href="#about">Hakkımızda</a></li>
             <li><a href="#contact">İletişim</a></li>
@@ -160,9 +161,36 @@
 
     <div class="banner">
         <h2>Aboneliklerinizi Kolayca Yönetin</h2>
-        <p>Abone Bilgi Yönetim Sistemi ile aboneliklerinizi ve ödemelerinizi tek bir yerden yönetin.</p>
+        <p>Abone Bilgi Sistemi ile aboneliklerinizi ve ödemelerinizi tek bir yerden yönetin.</p>
     </div>
 
+    <section id="contact">
+        <h1>Başvuru ve kaydet </h1>
+        <form action="submit_form.php" method="post">
+            <label for="name">İsim:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">E-posta:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="phone">Telefon:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+            <label for="address">Adres:</label>
+            <input type="text" id="address" name="address" required><br><br>
+            <input type="submit" value="Başvur ve Kaydet">
+        </form>
+    </section>
+    <section id="contact">
+        <h1>Abone Bilgilerinizi Doğrulayın</h1>
+        <form action="/abone_dogrula" method="post">
+            <label for="subscriberID">Abone Numarası:</label>
+            <input type="text" id="subscriberID" name="subscriberID" required><br><br>
+            
+            <label for="email">E-posta:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <input type="submit" value="Doğrula">
+        </form>
+    </section>
+    
     <section id="services">
         <h2>Hizmetlerimiz</h2>
         <ul>
@@ -206,17 +234,9 @@
         </form>
     </section>
 
-    <section id="blog">
-        <h2>Blog</h2>
-        <article>
-            <h3>En Son Haberler</h3>
-            <p>Yeni abonelik paketlerimiz hakkında bilgi almak için blog yazılarımıza göz atın.</p>
-        </article>
-    </section>
-
     <section id="team">
         <h2>Ekibimiz</h2>
-        <p>Ekibimiz, abonelik yönetimi ve müşteri destek hizmetlerinde deneyimli profesyonellerden oluşmaktadır. İşte bazı ekip üyelerimiz:</p>
+        <p>Ekibimiz, abonelik ve müşteri destek hizmetlerinde deneyimli profesyonellerden oluşmaktadır. İşte bazı ekip üyelerimiz:</p>
         <ul>
             <li>Hassan S. - CEO</li>
             <li>Ebrar A. - Müşteri Hizmetleri Müdürü</li>
